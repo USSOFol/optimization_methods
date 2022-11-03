@@ -185,8 +185,6 @@ def recombin(selch, pc):
     return selch
 
     """交叉方法"""
-
-
 def intercross(a, b):
     len = a.shape[0]
     r1 = np.random.randint(0, len, 1)
@@ -292,11 +290,10 @@ if __name__ == '__main__':
     dis = distance(x)
     # print(dis)
     x_size = x.shape
-    heredity = Gen(x, 1, 100, 400, 0.9, 0.05, 0.9)
 
+    heredity = Gen(x, 1, 100, 400, 0.9, 0.05, 0.9)
     """def __init__(self, code, code_style, nind, maxgen, pc, pm, ggap):"""
     heredity.init_group()
-
     chrom, dis = heredity.optimize()
     len_road = path_lengeth(dis, chrom)
     # print(len_road)
